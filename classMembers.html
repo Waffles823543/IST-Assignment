@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>RBSC Website</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link href="index.css" rel="stylesheet">
+</head>
+<body>
+	<script src="components.js"></script>
+
+	<h1 id="ClassHeader" style="text-align: center; position: relative">
+		<a href="index.html" class="backbutton">Back</a>
+		People in the class
+		<div style="font-size: 20px;">(You can click on the names)</div>
+	</h1>
+
+	<div id="classMembers">
+		<class-member v-for="member in members" v-on:click.native="member.active = !member.active" v-bind:name="member.name" v-bind:desc="member.desc" v-bind:active="member.active">
+		</class-member>
+	</div>
+
+	<script src="index.js"></script>
+
+</body>
+</html>

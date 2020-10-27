@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>RBSC Website</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+	<script src="components.js"></script>
+	<script>
+		let openAddNewMenu = function() {
+			let membersWidth = document.getElementById("classMembers").style.width
+			let form = document.getElementById("addNewForm");
+			if(membersWidth == "65%"){
+				document.getElementById("classMembers").style.width = "100%";
+				form.style.visibility = "hidden";
+			}else{
+				document.getElementById("classMembers").style.width = "65%";
+				form.style.visibility = "visible";
+			}
+			
+		}
+	</script>
+
+	<div id=classMembersContainer>
+		<h1 id="ClassHeader" style="text-align: center; position: relative">
+			<a href="index.html" class="classButtons backbutton">Back</a>
+			People in the class
+			<div style="font-size: 20px;">(You can click on the names)</div>
+			<a class="classButtons addNewMember" onclick="openAddNewMenu()">Add a new class member</a>
+			<a class="classButtons clearClass" @click="clearClass">Clear class</a>
+		</h1>
+
+		<div id="classMembers">
+			<class-member v-for="member in members" v-on:click.native="toggle(member.name)"
+				v-bind:name="member.name" v-bind:desc="member.desc" v-bind:active="active.includes(member.name)" preview="classMember">
+			</class-member>
+
+		</div>
+
+		<div id="addNewForm">
+			<form>
+				<h1 id="formLabel">Name</h1>
+				<input id="inputField" type="text" v-model="newName">
+				<h1 id="formLabel">Description</h1>
+				<input id="inputField" type="text" v-model="newBio">
+				<input id="submitButton" type="submit" @click.prevent="addNewMember" value="Add"></input>
+			</form>
+
+			<h1>Preview: </h1>
+			<class-member
+				v-bind:name="newName" v-bind:desc="newBio" v-bind:active="true" preview="preview">
+			</class-member>
+		</div>
+	</div>
+
+	<script src="classMembers.js"></script>
+
+</body>
+
+</html>

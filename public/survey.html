@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>RBSC Website</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link href="index.css" rel="stylesheet">
+</head>
+<body>
+	<script src="components.js"></script>
+    
+    <h1 id="ClassHeader" style="text-align: center; position: relative">
+        <a href="index.html" class="classButtons backbutton">Back</a>
+        Survey
+        <div style="font-size: 20px;">Please complete the survey below</div>
+    </h1>
+
+    <form>
+        <h1 id="formLabel">Name</h1>
+        <input id="inputField" type="text" v-model="name">
+        <h1 id="formLabel">Email</h1>
+        <input id="inputField" type="text" v-model="bio">
+        <h1 id="formLabel">Some other useless information</h1>
+        <input id="inputField" type="text" v-model="info">
+        <!-- <input id="submitButton" type="submit" @click.prevent="addNewMember" value="Add"></input> -->
+    </form>
+
+	<script src="survey.js"></script>
+</body>
+</html>

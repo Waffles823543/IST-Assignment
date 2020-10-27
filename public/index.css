@@ -4,6 +4,11 @@ body {
     color: #ffffff;
     margin: 0px;
 }
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #Header{
     color: #ffffff;
     text-align: center;
@@ -25,6 +30,8 @@ body {
 }
 #classMembers{
     text-align: center;
+    margin: 0;
+    display: inline-block;
 }
 .classMember{
     background-color: #00456F;
@@ -44,20 +51,36 @@ body {
     border-radius: 10px;
     padding: 10px
 }
-.backbutton{
+.classButtons{
     background-color: #ED1C24;
     position: absolute;
-    height: 40px    ;
-    width: 65px;
+    height: 45px;
     border-radius: 10px;
     padding: 10px;
-    padding-top: 15px;
+    padding-top: 20px;
     margin: 10px;
     color: #fff;
     text-align: center;
     font-size: 20px;
+}
+.backbutton{
+    width: 65px;
     top: 50%;
     left: 0;
+    transform: translate(0%, -65%);
+}
+.addNewMember{
+    padding-top: 10px;
+    height: 55px;
+    width: 150px;
+    top: 50%;
+    right: 2%;
+    transform: translate(0%, -65%);
+}
+.clearClass{
+    width: 115px;
+    top: 50%;
+    right: 15%;
     transform: translate(0%, -65%);
 }
 .peopleInClass{
@@ -70,4 +93,43 @@ body {
     color: #fff;
     text-align: center;
     font-size: 20px;
+}
+#formLabel{
+    font-size: 40px;
+    margin: 20px;
+}
+#inputField{
+    width: 400px;
+    height: 50px;
+    background-color: #00456F;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+#submitButton{
+    width: 400px;
+    height: 50px;
+    background-color: #ED1C24;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+#addNewForm{
+    width: 34%; 
+    text-align: center; 
+    display: inline-block; 
+    margin: 0; 
+    vertical-align: top; 
+    visibility: hidden;
+    background-color: #003555;
+    border-radius: 20px;
+}
+.preview{
+    background-color: #00456F;
+    width: 75%;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-table;
 }

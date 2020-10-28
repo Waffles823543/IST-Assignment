@@ -1,18 +1,33 @@
 const express = require("express")
 app = express();
-const sqlite3 = require("sqlite3").verbose();
-var db = new sqlite3.Database(':memory:');
+var db = require("./database.js")
 const port = 423;
 
-app.use(express.static("./public"))
+// app.use(express.static("./public"))
 
-db.serialize(function() {
-    db.run("CREATE TABLE class (name TEXT, desc TEXT)");
-    db.run("CREATE TABLE survey (name TEXT, email TEXT)");
-});
+app.put("./api/classMember", (req, res) => {
 
-app.put("./api/newClassMember", (req, res) => {
+})
 
+app.get("/", (req, res) => {
+    db.all('SELECT * FROM classMember', [], (err, rows) => {
+        console.log(rows)
+        res.json({
+            "message": "success",
+            "data": rows
+        })
+    })
+})
+
+app.get("./api/classMember", (req, res) => {
+    console.log("get")
+    db.all('SELECT * FROM classMember', [], (err, rows) => {
+        console.log(rows)
+        res.json({
+            "message": "success",
+            "data":rows
+        })
+    })
 })
 
 app.put("./api/surveyEntry", (req, res) => {

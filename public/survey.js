@@ -1,10 +1,8 @@
 var classMembers = new Vue({
-    el: '#classMembersContainer',
+    el: '#surveyForm',
     data() {
         return {
-            name: "",
-            email: "",
-            info: ""
+            response: {}
         }
     }
 })

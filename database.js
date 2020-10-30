@@ -107,28 +107,47 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
         throw err
     } else {
         console.log('Connected to the SQLite database.')
-        db.run(`CREATE TABLE classMembers (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name text, 
-            desc text
-        )`,
-            (err) => {
-                console.log(err);
-                if (err) {
-                    // Table already created
-                    console.log("Already Exists");
-                }else{
-                    // Table just created, creating some rows
-                    console.log("inserted")
-                    var insert = 'INSERT INTO classMembers (name, desc) VALUES (?,?)'
-                    for(person of initialPeople){
-                        db.run(insert, [person.name, person.desc])
+        db.run("DROP TABLE classMembers", (err) => {
+            console.log(err)
+            db.run(`CREATE TABLE classMembers (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name text, 
+                desc text
+            )`,
+                (err) => {
+                    // console.log(err);
+                    if (err) {
+                        // Table already created
+                        console.log("Already Exists");
+                    }else{
+                        // Table just created, creating some rows
+                        console.log("class table created")
+                        var insert = 'INSERT INTO classMembers (name, desc) VALUES (?,?)'
+                        for(person of initialPeople){
+                            db.run(insert, [person.name, person.desc])
+                        }
                     }
-                }
-            db.all("SELECT * FROM cassMembers", [], (err, rows) => {console.log(rows)})
-        });
+            });
+        })
+
+        db.run("DROP TABLE survey", (err) => {
+            console.log(err)
+            db.run(`CREATE TABLE survey (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name text, 
+                email text
+            )`,
+                (err) => {
+                    // console.log(err);
+                    if (err) {
+                        // Table already created
+                        console.log("Already Exists");
+                    }else{
+                        console.log("survey table created")
+                    }
+            });
+        })
     }
 });
-
 
 module.exports = db

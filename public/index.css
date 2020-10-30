@@ -8,6 +8,9 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
+tr{
+    width: 100%;
+}
 
 #Header{
     color: #ffffff;
@@ -18,7 +21,9 @@ a{
 }
 #headerDiv{
     background-color: #003555;
-    margin: 0px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px;
 }
 #ClassHeader{
     text-align: center;
@@ -49,7 +54,9 @@ a{
     margin: 0px;
     background-color: #ED1C24;
     border-radius: 10px;
-    padding: 10px
+    padding: 10px;
+    width: 50%;
+    display: inline-block;
 }
 .classButtons{
     background-color: #ED1C24;
@@ -132,4 +139,37 @@ a{
     padding: 10px;
     margin: 10px;
     display: inline-table;
+}
+.deleteButton{
+    background-color: #ED1C24;
+    color: #fff;
+    display: inline-block;
+    margin-top: 10px;
+    width: 38%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: "Comic Sans MS";
+    vertical-align: center;
+}
+#surveyLabel{
+    margin: 10px;
+    display: inline-block;
+}
+#surveyInput{
+    margin: 10px;
+    width: 400px;
+    height: 50px;
+    background-color: #00456F;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+}
+#schoolLinksContainer{
+    background-color: #00456F;
+    margin: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

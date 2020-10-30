@@ -10,7 +10,7 @@
 	<link href="index.css" rel="stylesheet">
 </head>
 <body>
-	<script src="components.js"></script>
+	<script src="surveyCompoenents.js"></script>
     
     <h1 id="ClassHeader" style="text-align: center; position: relative">
         <a href="index.html" class="classButtons backbutton">Back</a>
@@ -18,14 +18,16 @@
         <div style="font-size: 20px;">Please complete the survey below</div>
     </h1>
 
-    <form>
-        <h1 id="formLabel">Name</h1>
-        <input id="inputField" type="text" v-model="name">
-        <h1 id="formLabel">Email</h1>
-        <input id="inputField" type="text" v-model="bio">
-        <h1 id="formLabel">Some other useless information</h1>
-        <input id="inputField" type="text" v-model="info">
-        <!-- <input id="submitButton" type="submit" @click.prevent="addNewMember" value="Add"></input> -->
+    <form id="surveyForm" style="text-align: center;">
+        <div style="text-align: right;">
+            <table>
+                <survey-question question="Name" id="1"></survey-question>
+                <survey-question question="Email" id="2"></survey-question>
+                <survey-question question="" id="3"></survey-question>
+            </table>
+        </div>
+
+        <input style="width: 85%; font-size: 30px; font-family: 'Comic Sans MS'" id="submitButton" type="submit" @click.prevent="submitSurvey" value="Submit"></input>
     </form>
 
 	<script src="survey.js"></script>

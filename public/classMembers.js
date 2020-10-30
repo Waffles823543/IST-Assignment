@@ -10,10 +10,11 @@ var classMembers = new Vue({
     },
     methods: {
         addNewMember() {
-            this.members.push({
+            let data = {
                 name: this.newName,
                 desc: this.newBio
-            })
+            }
+            pushPerson(data);
             this.newName = "";
             this.newBio = "";
             document.getElementById("classMembers").style.width = "100%";
@@ -31,6 +32,32 @@ var classMembers = new Vue({
             }else{
                 this.active.push(member);
             }
+        },
+        deletePerson(member){
+            console.log(member)
         }
     }
 })
+
+function pushPerson(data){
+    if(data.name == "" || data.desc == ""){
+        return
+    }
+    $.ajax({ 
+        url: "api/classMembers", 
+        type: "PUT",
+        data: data, 
+        success: res => {
+            console.log(res);
+            classMembers.members = [];
+            classMembers.members = res;
+        }
+    });
+}
+
+window.onload = () => {
+    $.get( "api/classMembers", data => {
+        console.log(data);
+        classMembers.members = data;
+    });
+}

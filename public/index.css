@@ -55,7 +55,7 @@ tr{
     background-color: #ED1C24;
     border-radius: 10px;
     padding: 10px;
-    width: 50%;
+    width: 80%;
     display: inline-block;
 }
 .classButtons{
@@ -143,9 +143,8 @@ tr{
 .deleteButton{
     background-color: #ED1C24;
     color: #fff;
-    display: inline-block;
     margin-top: 10px;
-    width: 38%;
+    width: 45%;
     height: 50px;
     font-size: 20px;
     border-radius: 10px;
@@ -166,10 +165,30 @@ tr{
     font-size: 20px;
     display: inline-block;
 }
-#schoolLinksContainer{
+.mainPageSection {
     background-color: #00456F;
     margin: 10px;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 20px;
+}
+.sectionHeader{
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 0px;
+}
+.schoolLinksHeader{
+    margin-bottom: 20px;
+}
+.schoolLink{
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 30px;
+}
+.sectionContent{
+    font-size: 20px;
+    padding: 5px;
+    margin: 0px;
 }

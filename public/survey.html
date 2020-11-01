@@ -3,27 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="widtd=device-widtd, initial-scale=1">
 
 	<title>RBSC Website</title>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<link href="index.css" rel="stylesheet">
 </head>
 <body>
-	<script src="surveyCompoenents.js"></script>
+	<script src="surveyQuestion.js"></script>
     
     <h1 id="ClassHeader" style="text-align: center; position: relative">
         <a href="index.html" class="classButtons backbutton">Back</a>
         Survey
-        <div style="font-size: 20px;">Please complete the survey below</div>
+        <div style="font-size: 20px;">Please complete tde survey below</div>
     </h1>
 
     <form id="surveyForm" style="text-align: center;">
         <div style="text-align: right;">
             <table>
-                <survey-question question="Name" id="1"></survey-question>
-                <survey-question question="Email" id="2"></survey-question>
-                <survey-question question="" id="3"></survey-question>
+                <tr v-for="q of questions">
+                    <td>
+                        <h1 id="surveyLabel">{{q.question}}</h1>
+                    </td>
+                    <td>
+                        <input id="surveyInput" type="text" v-model="q.answer">
+                    </td>
+                </tr>
             </table>
         </div>
 

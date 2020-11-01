@@ -20,9 +20,6 @@ var classMembers = new Vue({
             document.getElementById("classMembers").style.width = "100%";
             document.getElementById("addNewForm").style.visibility = "hidden";
         },
-        clearClass() {
-            this.members = []
-        },
         toggle(member){
             if(this.active.includes(member)){
                 const index = this.active.indexOf(member);

@@ -48,7 +48,7 @@ initialPeople = [{
     },
     {
         name: "DJwayne Quintana",
-        desc: 'sam says he is thicccccc'
+        desc: 'He\' pretty cool'
     },
     {
         name: "Jake Podesta",
@@ -134,8 +134,10 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
             console.log(err)
             db.run(`CREATE TABLE survey (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name text, 
-                email text
+                FName text, 
+                LName text, 
+                Age integer, 
+                Question4 text,
             )`,
                 (err) => {
                     // console.log(err);

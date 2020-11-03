@@ -54,7 +54,7 @@ function pushPerson(data){
 
 window.onload = () => {
     $.get( "api/classMembers", data => {
-        console.log(data);
         classMembers.members = data;
+        console.log(data);
     });
 }

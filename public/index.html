@@ -7,9 +7,12 @@
 
 	<title>RBSC Website</title>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
 	<link href="index.css" rel="stylesheet">
 </head>
 <body>
+	<!-- Header -->
 	<div id="headerDiv">
 		<table>
 			<tr>
@@ -19,13 +22,14 @@
 				<th width=100%>
 					<h1 id="Header">10IST1 Website</h1>
 					<p style="font-size: 20px; margin-top: 5px;margin-bottom: 30px;">Rose Bay Secondary College</p>
-					<a href="classMembers.html" class="peopleInClass">People in the Class</a>
-					<a href="survey.html" class="peopleInClass">Complete the Survey</a>
+					<a href="classMembers.html" class="peopleInClass" id="peopleInClassButton">People in the Class</a>
+					<a href="survey.html" class="peopleInClass" id="surveyButton">Complete the Survey</a>
 				</th>
 			</tr>
 		</table>
 	</div>
-	<div class="mainPageSection schoolLinksContainer">
+	<!-- Links -->
+	<div class="mainPageSection" id="schoolLinksContainer">
 		<h1 class="sectionHeader schoolLinksHeader">Useful school links:</h1>
 		<a href="http://www.rosebay-h.schools.nsw.edu.au/" class="peopleInClass schoolLink">School Website</a>
 		<a href="http://web2.rosebay-h.schools.nsw.edu.au/portal/dashboard" class="peopleInClass schoolLink">Sentral</a>
@@ -34,13 +38,27 @@
 		<a href="https://teams.microsoft.com/_#/school//?ctx=teamsGrid" class="peopleInClass schoolLink">Microsoft Teams</a>
 		<a href="https://classroom.google.com/u/0/c/NTA0MDgwMjEwMTNa" class="peopleInClass schoolLink">Google Classroom</a>
 	</div>
-	<div class="mainPageSection">
+	<!-- About -->
+	<div class="mainPageSection" id="aboutSection">
 		<h1 class="sectionHeader">About the Class</h1>
 		<ul>
 			<li class="sectionContent">10IST1 is the only Year 10 IST class at Rose Bay Secondary College</li>
 			<li class="sectionContent">There are 24 people in 10IST1</li>
 			<li class="sectionContent">We have 9 periods of IST every fortnight</li>
+			<li class="sectionContent">10IST1 has so far covered:</li>
+			<ul>
+				<li class="sectionContent">Python</li>
+				<li class="sectionContent">Databases</li>
+				<li class="sectionContent">Photoshop</li>
+				<li class="sectionContent">HTML + CSS</li>
+			</ul>
 		</ul>
 	</div>
+
+	<div class="mainPageSection" style="padding: 5px;">
+		<button class="peopleInClass" style="width: fit-content; height: auto; font-family: 'Comic Sans MS';" onclick="document.cookie='tutorial=true'">Show tutorial on reload</button>
+	</div>
+	
+	<script src="index.js"></script>
 </body>
 </html>

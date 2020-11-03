@@ -108,7 +108,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
     } else {
         console.log('Connected to the SQLite database.')
         db.run("DROP TABLE classMembers", (err) => {
-            console.log(err)
+            console.log("err: " + err)
             db.run(`CREATE TABLE classMembers (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name text, 
@@ -131,13 +131,15 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
         })
 
         db.run("DROP TABLE survey", (err) => {
-            console.log(err)
+            console.log("err: " + err)
             db.run(`CREATE TABLE survey (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 FName text, 
                 LName text, 
                 Age integer, 
-                Question4 text,
+                Taught text,
+                Change text,
+                Proficiency text
             )`,
                 (err) => {
                     // console.log(err);
@@ -146,6 +148,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
                         console.log("Already Exists");
                     }else{
                         console.log("survey table created")
+                        db.run('INSERT INTO survey (FName, LName, Age) VALUES ("Joe", "Blogs", 12)')
                     }
             });
         })

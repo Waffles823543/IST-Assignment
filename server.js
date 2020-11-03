@@ -32,6 +32,21 @@ app.delete("/api/classMembers", (req, res) => {
     })
 })
 
+app.put("/api/survey", (req, res) => {
+    console.log(req.body.answers);
+    let insert = 'INSERT INTO survey (FName, LName, Age, Taught, Change, Proficiency) VALUES (?, ?, ?, ?, ?, ?)'
+    db.run(insert, req.body.answers);
+    db.all("SELECT * FROM survey ORDER BY FName", [], (err, rows) => {
+        res.json(rows)
+    })
+})
+
+app.get("/api/survey", (req, res) => {
+    db.all("SELECT * FROM survey ORDER BY FName", [], (err, rows) => {
+        res.json(rows)
+    })
+})
+
 app.listen(port, () => {
     console.log("app listening on port " + port);
 })

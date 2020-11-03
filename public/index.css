@@ -4,28 +4,32 @@ body {
     color: #ffffff;
     margin: 0px;
 }
-a{
+
+a {
     text-decoration: none;
     cursor: pointer;
 }
-tr{
+
+tr {
     width: 100%;
 }
 
-#Header{
+#Header {
     color: #ffffff;
     text-align: center;
     font-size: 75px;
     margin: 0px;
     padding-left: 10px;
 }
-#headerDiv{
+
+#headerDiv {
     background-color: #003555;
     margin: 10px;
     border-radius: 10px;
     padding: 5px;
 }
-#ClassHeader{
+
+#ClassHeader {
     text-align: center;
     font-size: 50px;
     margin: 10px;
@@ -33,12 +37,14 @@ tr{
     border-radius: 10px;
     padding: 10px;
 }
-#classMembers{
+
+#classMembers {
     text-align: center;
     margin: 0;
     display: inline-block;
 }
-.classMember{
+
+.classMember {
     background-color: #00456F;
     width: calc(100%/5);
     border-radius: 10px;
@@ -46,11 +52,13 @@ tr{
     margin: 10px;
     display: inline-table;
 }
-.memberName{
+
+.memberName {
     margin: 0px;
     margin-bottom: 10px;
 }
-.memberDesc{
+
+.memberDesc {
     margin: 0px;
     background-color: #ED1C24;
     border-radius: 10px;
@@ -58,7 +66,8 @@ tr{
     width: 80%;
     display: inline-block;
 }
-.classButtons{
+
+.classButtons {
     background-color: #ED1C24;
     position: absolute;
     height: 45px;
@@ -70,13 +79,15 @@ tr{
     text-align: center;
     font-size: 20px;
 }
-.backbutton{
+
+.backbutton {
     width: 65px;
     top: 50%;
     left: 0;
     transform: translate(0%, -65%);
 }
-.addNewMember{
+
+.addNewMember {
     padding-top: 10px;
     height: 55px;
     width: 150px;
@@ -84,13 +95,15 @@ tr{
     right: 2%;
     transform: translate(0%, -65%);
 }
-.clearClass{
+
+.clearClass {
     width: 115px;
     top: 50%;
     right: 15%;
     transform: translate(0%, -65%);
 }
-.peopleInClass{
+
+.peopleInClass {
     background-color: #ED1C24;
     height: 10px;
     width: 65px;
@@ -101,11 +114,13 @@ tr{
     text-align: center;
     font-size: 20px;
 }
-#formLabel{
+
+#formLabel {
     font-size: 40px;
     margin: 20px;
 }
-#inputField{
+
+#inputField {
     width: 400px;
     height: 50px;
     background-color: #00456F;
@@ -113,7 +128,8 @@ tr{
     color: #fff;
     font-size: 20px;
 }
-#submitButton{
+
+#submitButton {
     width: 400px;
     height: 50px;
     background-color: #ED1C24;
@@ -122,17 +138,19 @@ tr{
     color: #fff;
     font-size: 20px;
 }
-#addNewForm{
-    width: 34%; 
-    text-align: center; 
-    display: inline-block; 
-    margin: 0; 
-    vertical-align: top; 
+
+#addNewForm {
+    width: 34%;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
     visibility: hidden;
     background-color: #003555;
     border-radius: 20px;
 }
-.preview{
+
+.preview {
     background-color: #00456F;
     width: 75%;
     border-radius: 10px;
@@ -140,7 +158,8 @@ tr{
     margin: 10px;
     display: inline-table;
 }
-.deleteButton{
+
+.deleteButton {
     background-color: #ED1C24;
     color: #fff;
     margin-top: 10px;
@@ -151,11 +170,13 @@ tr{
     font-family: "Comic Sans MS";
     vertical-align: center;
 }
-#surveyLabel{
+
+#surveyLabel {
     margin: 10px;
     display: inline-block;
 }
-#surveyInput{
+
+#surveyInput {
     margin: 10px;
     width: 400px;
     height: 50px;
@@ -165,6 +186,7 @@ tr{
     font-size: 20px;
     display: inline-block;
 }
+
 .mainPageSection {
     background-color: #00456F;
     margin: 10px;
@@ -173,22 +195,56 @@ tr{
     padding-right: 10px;
     padding-bottom: 20px;
 }
-.sectionHeader{
+
+.sectionHeader {
     padding: 5px;
     margin: 5px;
     margin-bottom: 0px;
 }
-.schoolLinksHeader{
+
+.schoolLinksHeader {
     margin-bottom: 20px;
 }
-.schoolLink{
+
+.schoolLink {
     color: #fff;
     font-size: 20px;
     padding: 10px;
     margin-top: 30px;
 }
-.sectionContent{
+
+.sectionContent {
     font-size: 20px;
     padding: 5px;
     margin: 0px;
+}
+
+#responses {
+    font-size: 20px;
+    border-collapse: collapse;
+    width: 98.5%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#responses td, #responses th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#responses tr {
+    background-color: #00456F;
+}
+
+
+#responses tr:hover {
+    background-color: #003555;
+}
+
+#responses th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ED1C24;
+    color: white;
 }

@@ -31,22 +31,24 @@ var classMembers = new Vue({
     },
     methods: {
         submitSurvey() {
-            let PutData = {answers: []}
-            for (q of this.questions){
-                PutData.answers.push(q.answer)
-            }
-            console.log(PutData)
-            $.ajax({ 
-                url: "api/survey", 
-                type: "PUT",
-                data: PutData, 
-                success: res => {
-                    console.log(res);
-                    for (q of this.questions){
-                        q.answer = "";
-                    }
+            if(this.questions[0].answer != ""){
+                let PutData = {answers: []}
+                for (q of this.questions){
+                    PutData.answers.push(q.answer)
                 }
-            });
+                console.log(PutData)
+                $.ajax({ 
+                    url: "api/survey", 
+                    type: "PUT",
+                    data: PutData, 
+                    success: res => {
+                        console.log(res);
+                        for (q of this.questions){
+                            q.answer = "";
+                        }
+                    }
+                });
+            }
         }
     }
 })

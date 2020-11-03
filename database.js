@@ -8,35 +8,27 @@ initialPeople = [{
     },
     {
         name: "Sam Dunn",
-        desc: 'sam, just sam'
+        desc: 'Is epic'
     },
     {
         name: "Samuel Ezra",
-        desc: 'doesn\'t have a foil'
+        desc: 'Sails'
     },
     {
         name: "Dror Liraz",
-        desc: 'she speaks hebrew, and trys hard at english'
+        desc: 'Hoarder of books'
     },
     {
         name: "Nathan Tietzel-Berry",
-        desc: 'short'
+        desc: 'His dad is in the navy'
     },
     {
         name: "Alonzo Navaro",
-        desc: 'whistles'
-    },
-    {
-        name: "Alex Toot",
-        desc: '[redacted]'
-    },
-    {
-        name: "Zara Joseph",
-        desc: 'try hard'
+        desc: 'Slick Hair'
     },
     {
         name: "Colin Wu",
-        desc: 'smart'
+        desc: 'Smart'
     },
     {
         name: "Brian Wu",
@@ -44,19 +36,15 @@ initialPeople = [{
     },
     {
         name: "Lam Ngyuen",
-        desc: 'Lam'
+        desc: 'Epic'
     },
     {
         name: "DJwayne Quintana",
-        desc: 'He\' pretty cool'
-    },
-    {
-        name: "Jake Podesta",
-        desc: 'sus'
+        desc: 'He\'s pretty cool'
     },
     {
         name: "Shaan Daly",
-        desc: 'like cricket I think'
+        desc: 'likes cricket, he is a self aclaimed cool dude'
     },
     {
         name: "Jordan Bennet",
@@ -67,37 +55,17 @@ initialPeople = [{
         desc: 'I think he type kinda fast'
     },
     {
-        name: "Jet Nathan",
-        desc: 'Nazi'
-    },
-    {
         name: "Feliks Wilkinson",
-        desc: 'has $$$'
-    },
-    {
-        name: "Jindrich Stebetak",
-        desc: 'plays some game that has a ball'
+        desc: 'Daze One'
     },
     {
         name: "Tamzid Hossain",
-        desc: 'oporto'
+        desc: 'Bringer of the Oporto'
     },
     {
         name: "Anuj Rai",
         desc: 'Kerry calls him Amy for some reason'
-    },
-    {
-        name: "Carlos Calderon",
-        desc: 'Caaaaaaaarl'
-    },
-    {
-        name: "Etai Sofer",
-        desc: 'Quiet'
-    },
-    {
-        name: "Mark Andres",
-        desc: 'Eshay'
-    },
+    }
 ]
 
 let db = new sqlite3.Database(DBSOURCE, (err) => {
